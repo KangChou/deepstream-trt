@@ -1,6 +1,12 @@
 # deepstream-trt
 模型设计与量化分析
 
+DeepStream应用程序将深度神经网络和其他复杂的处理任务引入到流处理管道中，以实现对视频和其他传感器数据的近实时分析。从这些传感器中提取有意义的见解为提高运营效率和安全性创造了机会。例如，摄像头是当前使用最多的物联网传感器。在我们的家中，街道上，停车场，大型购物中心，仓库，工厂中都可以找到相机–无处不在。视频分析的潜在用途是巨大的：访问控制，防止丢失，自动结帐，监视，安全，自动检查（QA），包裹分类（智能物流），交通控制/工程，工业自动化等。
+
+![image](https://user-images.githubusercontent.com/36963108/163709028-64901c72-aa40-4286-bd03-99b7a975af29.png)
+
+
+
 NVIDIA DeepStream SDK 开发人员指南教程学习文档:https://docs.nvidia.com/metropolis/deepstream/dev-guide/index.html
 ```
 docker pull nvcr.io/nvidia/deepstream:5.1-21.02-devel
@@ -39,5 +45,20 @@ ifeq ($(CUDA_VER),)
 endif
 
 ```
+DeepStream SDK Python 绑定和示例应用程序:https://github.com/NVIDIA-AI-IOT/deepstream_python_apps
+
+使用 Deepstream SDK 和迁移学习工具包的人数统计应用程序:https://github.com/NVIDIA-AI-IOT/deepstream-occupancy-analytics
+
+NVIDIA Jetson Xavier NX-deepstream-Test编译测试: https://isning.top/index.php/2021/02/02/nvidia-jetson-xavier-nx-deepstream-test%e7%bc%96%e8%af%91%e6%b5%8b%e8%af%95/
+
+deepstream5.0 pdf:https://cdn-prod.scdn6.secure.raxcdn.com/static/media/DAM_496c8e1e-c1ac-431f-914c-75dc29ad3168.pdf
+
+TX2 /Xavier /deepstream:https://blog.csdn.net/mao_hui_fei/category_10877877.html
+
+DeepStream初步学习：https://blog.csdn.net/Tosonw/article/details/104154090
+
+DeepStream 场景应用：https://www.forecr.io/blogs/ai-algorithms/preparing-a-deepstream-application-on-dsbox-nx
+
+人工智能算法应用场景技术博客教程：https://www.forecr.io/blogs/ai-algorithms
 
 
