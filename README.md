@@ -29,7 +29,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-11.1/bin:${PATH}
 
 步骤2：
-n -s /usr/local/cuda-11.1 /usr/local/cuda
+ln -s /usr/local/cuda-11.1 /usr/local/cuda
 
 步骤3：
 添加makefile文件的cuda版本参数：CUDA_VER?=11.1
