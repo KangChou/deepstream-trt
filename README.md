@@ -53,6 +53,21 @@ NVIDIA Jetson Xavier NX-deepstream-Test编译测试: https://isning.top/index.ph
 
 deepstream5.0 pdf:https://cdn-prod.scdn6.secure.raxcdn.com/static/media/DAM_496c8e1e-c1ac-431f-914c-75dc29ad3168.pdf
 
+
+How to run the sample:
+Start the docker container image
+```bash
+$ sudo docker run --gpus all --rm -it --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864
+-v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -w /root nvcr.io/nvidia/deepstream:5.0-
+dp-20.04-samples
+$ cd /opt/nvidia/deepstream/deepstream-5.0/sources/apps/sample_apps/deepstream-app
+Edit the configuration file and enable sink1 type 3=File
+$ vim /opt/nvidia/deepstream/deepstream-5.0/samples/configs/deepstreamapp/source30_1080p_dec_infer-resnet_tiled_display_int8.txt
+$ make
+$ deepstream-app -c /opt/nvidia/deepstream/deepstream-5.0/samples/configs/deepstreamapp/source30_1080p_dec_infer-resnet_tiled_display_int8.txt
+
+```
+
 TX2 /Xavier /deepstream:https://blog.csdn.net/mao_hui_fei/category_10877877.html
 
 DeepStream初步学习：https://blog.csdn.net/Tosonw/article/details/104154090
